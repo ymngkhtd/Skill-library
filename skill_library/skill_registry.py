@@ -1,6 +1,6 @@
 """Skill registry for managing and discovering skills."""
 
-from typing import Optional, Type
+from typing import Any, Optional, Type
 from .base_skill import BaseSkill
 
 
@@ -126,7 +126,7 @@ class SkillRegistry:
             or query_lower in skill.description.lower()
         ]
     
-    def get_all_metadata(self) -> list[dict]:
+    def get_all_metadata(self) -> list[dict[str, Any]]:
         """
         Get metadata for all registered skills.
         

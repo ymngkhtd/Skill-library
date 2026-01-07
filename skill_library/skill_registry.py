@@ -1,6 +1,6 @@
 """Skill registry for managing and discovering skills."""
 
-from typing import Dict, List, Optional, Type
+from typing import Optional, Type
 from .base_skill import BaseSkill
 
 
@@ -13,8 +13,8 @@ class SkillRegistry:
     
     def __init__(self):
         """Initialize the skill registry."""
-        self._skills: Dict[str, BaseSkill] = {}
-        self._skill_classes: Dict[str, Type[BaseSkill]] = {}
+        self._skills: dict[str, BaseSkill] = {}
+        self._skill_classes: dict[str, Type[BaseSkill]] = {}
     
     def register(self, skill: BaseSkill) -> None:
         """
@@ -70,7 +70,7 @@ class SkillRegistry:
         """
         return self._skills.get(skill_name)
     
-    def list_skills(self) -> List[str]:
+    def list_skills(self) -> list[str]:
         """
         List all registered skill names.
         
@@ -79,7 +79,7 @@ class SkillRegistry:
         """
         return list(self._skills.keys())
     
-    def find_by_category(self, category: str) -> List[BaseSkill]:
+    def find_by_category(self, category: str) -> list[BaseSkill]:
         """
         Find skills by category.
         
@@ -94,7 +94,7 @@ class SkillRegistry:
             if skill.category == category
         ]
     
-    def find_by_tag(self, tag: str) -> List[BaseSkill]:
+    def find_by_tag(self, tag: str) -> list[BaseSkill]:
         """
         Find skills by tag.
         
@@ -109,7 +109,7 @@ class SkillRegistry:
             if tag in skill.tags
         ]
     
-    def search(self, query: str) -> List[BaseSkill]:
+    def search(self, query: str) -> list[BaseSkill]:
         """
         Search for skills by name or description.
         
@@ -126,7 +126,7 @@ class SkillRegistry:
             or query_lower in skill.description.lower()
         ]
     
-    def get_all_metadata(self) -> List[Dict]:
+    def get_all_metadata(self) -> list[dict]:
         """
         Get metadata for all registered skills.
         

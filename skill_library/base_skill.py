@@ -2,7 +2,7 @@
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
+from typing import Any, Optional
 from enum import Enum
 
 
@@ -33,7 +33,7 @@ class SkillResult:
     success: bool
     data: Any = None
     error: Optional[str] = None
-    metadata: Dict[str, Any] = field(default_factory=dict)
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
 class BaseSkill(ABC):
@@ -62,7 +62,7 @@ class BaseSkill(ABC):
     
     @property
     @abstractmethod
-    def parameters(self) -> List[SkillParameter]:
+    def parameters(self) -> list[SkillParameter]:
         """Return the list of parameters this skill accepts."""
         pass
     
@@ -77,7 +77,7 @@ class BaseSkill(ABC):
         return "general"
     
     @property
-    def tags(self) -> List[str]:
+    def tags(self) -> list[str]:
         """Return tags associated with the skill."""
         return []
     
@@ -126,7 +126,7 @@ class BaseSkill(ABC):
         if not self.description:
             raise ValueError("Skill description cannot be empty")
     
-    def get_metadata(self) -> Dict[str, Any]:
+    def get_metadata(self) -> dict[str, Any]:
         """Return all metadata about the skill."""
         return {
             "name": self.name,

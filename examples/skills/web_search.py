@@ -1,6 +1,5 @@
 """Web search skill (simulated) for searching information."""
 
-from typing import List
 from skill_library import BaseSkill, SkillParameter, SkillResult, SkillParameterType
 
 
@@ -16,7 +15,7 @@ class WebSearchSkill(BaseSkill):
         return "Simulates web search functionality (returns mock results)"
     
     @property
-    def parameters(self) -> List[SkillParameter]:
+    def parameters(self) -> list[SkillParameter]:
         return [
             SkillParameter(
                 name="query",
@@ -38,7 +37,7 @@ class WebSearchSkill(BaseSkill):
         return "search"
     
     @property
-    def tags(self) -> List[str]:
+    def tags(self) -> list[str]:
         return ["web", "search", "information"]
     
     def execute(self, **kwargs) -> SkillResult:

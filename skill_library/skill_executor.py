@@ -1,7 +1,7 @@
 """Skill execution framework."""
 
 import logging
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 from .base_skill import BaseSkill, SkillResult
 from .skill_registry import SkillRegistry
 
@@ -26,7 +26,7 @@ class SkillExecutor:
     def execute(
         self,
         skill_name: str,
-        parameters: Optional[Dict[str, Any]] = None,
+        parameters: Optional[dict[str, Any]] = None,
         validate: bool = True
     ) -> SkillResult:
         """
@@ -75,7 +75,7 @@ class SkillExecutor:
     
     def batch_execute(
         self,
-        executions: list[tuple[str, Dict[str, Any]]]
+        executions: list[tuple[str, dict[str, Any]]]
     ) -> list[SkillResult]:
         """
         Execute multiple skills in sequence.

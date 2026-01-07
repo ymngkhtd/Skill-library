@@ -1,6 +1,5 @@
 """Calculator skill for mathematical operations."""
 
-from typing import List
 from skill_library import BaseSkill, SkillParameter, SkillResult, SkillParameterType
 
 
@@ -16,7 +15,7 @@ class CalculatorSkill(BaseSkill):
         return "Performs basic mathematical operations: add, subtract, multiply, divide"
     
     @property
-    def parameters(self) -> List[SkillParameter]:
+    def parameters(self) -> list[SkillParameter]:
         return [
             SkillParameter(
                 name="operation",
@@ -43,7 +42,7 @@ class CalculatorSkill(BaseSkill):
         return "math"
     
     @property
-    def tags(self) -> List[str]:
+    def tags(self) -> list[str]:
         return ["calculator", "math", "arithmetic"]
     
     def execute(self, **kwargs) -> SkillResult:

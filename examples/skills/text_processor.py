@@ -1,6 +1,5 @@
 """Text processing skill for string operations."""
 
-from typing import List
 from skill_library import BaseSkill, SkillParameter, SkillResult, SkillParameterType
 
 
@@ -16,7 +15,7 @@ class TextProcessorSkill(BaseSkill):
         return "Processes text with operations like uppercase, lowercase, reverse, count words"
     
     @property
-    def parameters(self) -> List[SkillParameter]:
+    def parameters(self) -> list[SkillParameter]:
         return [
             SkillParameter(
                 name="text",
@@ -37,7 +36,7 @@ class TextProcessorSkill(BaseSkill):
         return "text"
     
     @property
-    def tags(self) -> List[str]:
+    def tags(self) -> list[str]:
         return ["text", "string", "processing"]
     
     def execute(self, **kwargs) -> SkillResult:

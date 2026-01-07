@@ -1,0 +1,34 @@
+{
+  "name": "agent-skill-library",
+  "version": "0.1.0",
+  "description": "A modular, extensible framework for building AI agent capabilities",
+  "main": "skill_library",
+  "type": "module",
+  "keywords": [
+    "agent",
+    "skills",
+    "ai",
+    "framework",
+    "modular",
+    "extensible"
+  ],
+  "architecture": {
+    "core_components": [
+      "BaseSkill",
+      "SkillRegistry",
+      "SkillExecutor"
+    ],
+    "features": [
+      "Type-safe parameters",
+      "Flexible discovery",
+      "Error handling",
+      "Metadata-driven",
+      "Batch execution"
+    ]
+  },
+  "directories": {
+    "library": "skill_library",
+    "examples": "examples",
+    "docs": "ARCHITECTURE.md"
+  }
+}

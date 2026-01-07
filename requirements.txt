@@ -1,0 +1,10 @@
+# Agent Skill Library - Python Requirements
+
+# No external dependencies required for core library!
+# The library is built using only Python standard library features.
+
+# Optional development dependencies (for future enhancements):
+# pytest>=7.0.0          # For testing
+# black>=22.0.0          # For code formatting
+# mypy>=0.990            # For type checking
+# pylint>=2.15.0         # For linting
